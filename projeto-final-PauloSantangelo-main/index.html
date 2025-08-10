@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="theme-color" content="#0d0d0d" />
+  <meta name="description" content="Portfólio de Paulo: soluções em investimentos, tecnologia e marketing digital com foco em performance e inovação." />
+  <meta property="og:title" content="Paulo - Investimentos, Tecnologia e Marketing" />
+  <meta property="og:description" content="Conheça meu portfólio e soluções que unem inteligência financeira e estratégias digitais." />
+  <meta property="og:image" content="https://www.seusite.com/imagem-og.jpg" />
+  <meta property="og:url" content="https://www.seusite.com" />
+
+  <title>Paulo - Investimentos, Tecnologia e Marketing</title>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </noscript>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+  <style>
+    /* CSS pequeno só pro efeito novo, sem mudar seu tema */
+
+    /* vídeo de fundo ocupa a seção */
+    #bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;background:#000}
+    main#home{position:relative;overflow:hidden}
+
+    /* ===== CARROSSEL do portfólio ===== */
+    .portfolio-carousel{position:relative;max-width:1200px;margin:0 auto;padding:0 1rem}
+    .carousel-viewport{
+      display:grid;grid-auto-flow:column;grid-auto-columns:85%;
+      gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;scroll-padding:1rem;padding:.25rem 0 1rem
+    }
+    /* em telas maiores mostra mais itens por vez */
+    @media(min-width:640px){.carousel-viewport{grid-auto-columns:60%}}
+    @media(min-width:1024px){.carousel-viewport{grid-auto-columns:32%}}
+
+    .carousel-item{scroll-snap-align:start}
+    .carousel-controls{display:flex;justify-content:center;gap:.5rem;margin-top:.25rem}
+    .carousel-btn{border:1px solid rgba(132,94,247,.5);background:#0d0d0d;color:#eaeaea;border-radius:.6rem;padding:.55rem .9rem;cursor:pointer}
+
+    /* ===== ACORDEON das soluções ===== */
+    .accordion{max-width:1100px;margin:0 auto;padding-inline:1rem}
+    .accordion details{margin-bottom:.75rem;border:1px solid rgba(132,94,247,.35);border-radius:1rem;overflow:hidden}
+    .accordion summary{cursor:pointer;padding:1rem 1.1rem;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+    .accordion .acc-content{padding:0 1.1rem 1.1rem}
+    .accordion .tag{font-size:.75rem;opacity:.8}
+  </style>
+</head>
+<body>
+
+  <header class="menu-topo" role="banner">
+    <div class="logo">
+      <img src="favicon.ico" alt="Logo de Paulo" width="40" height="40">
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav-links" id="nav-links" role="navigation" aria-label="Menu principal">
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#solomon">Solomon</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a href="#contato" class="btn-agendar" role="button">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i> Conversar Agora
+    </a>
+  </header>
+
+  <main id="home" role="main">
+    <!-- vídeo de fundo -->
+    <video autoplay muted loop playsinline preload="auto" id="bg-video" aria-label="Vídeo de fundo sobre cidade moderna">
+      <source src="images/background.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+    <div class="home-content">
+      <img src="images/paulo-perfil1.webp" alt="Foto de Paulo sorrindo" class="foto-perfil" width="120" height="120">
+      <h1>Paulo - Investimentos, Tecnologia e Marketing</h1>
+      <p>Contador, empreendedor e apaixonado por soluções que transformam negócios.</p>
+      <a href="#sobre" class="btn" role="link">Saiba mais sobre mim</a>
+    </div>
+  </main>
+
+  <section id="sobre" aria-labelledby="sobre-heading">
+    <h2 id="sobre-heading">Sobre Mim</h2>
+    <div class="slider-container">
+      <div class="slider-images" role="group" aria-label="Galeria de fotos do Paulo">
+        <img src="images/paulo-perfil2.webp" alt="Paulo em pose de perfil" loading="lazy">
+        <img src="images/paulo-profissional3.webp" alt="Paulo trabalhando com notebook" loading="lazy">
+        <img src="images/paulo-retrato1.webp" alt="Retrato profissional de Paulo 1" loading="lazy">
+        <img src="images/paulo-retrato2.webp" alt="Retrato profissional de Paulo 2" loading="lazy">
+      </div>
+      <div class="slider-text">
+        <p>Sou formado em Contabilidade, com MBA em Inovação e Empreendedorismo, pós-graduação em Mercado de Capitais e atualmente curso Análise e Desenvolvimento de Sistemas.</p>
+        <p>Minha trajetória me levou ao universo dos investimentos, onde encontrei minha verdadeira paixão.</p>
+        <p>Além disso, sou cofundador de uma agência de marketing digital ao lado da minha esposa, onde ajudamos empresas a se posicionarem estrategicamente no ambiente online, unindo performance e criatividade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÕES -> vira ACORDEON e ganha +2 cartões -->
+  <section id="solucoes" aria-labelledby="solucoes-heading">
+    <div class="container">
+      <h2 id="solucoes-heading">Soluções</h2>
+
+      <div class="accordion" role="tablist">
+        <details>
+          <summary role="tab"><span>Renda Fixa sem Mistério</span> <span class="tag">#Investimentos</span></summary>
+          <div class="acc-content" role="region">
+            <p>Conheça todos os produtos melhores que a poupança e que apresentam mais retorno com a mesma segurança.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary role="tab"><span>Renda Variável</span> <span class="tag">#Ações #FIIs</span></summary>
+          <div class="acc-content" role="region">
+            <p>Com grande foco em Ações e Fundos de Investimentos, descubra a melhor forma de aproveitar as oscilações da Bolsa.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary role="tab"><span>Agência VIBE</span> <span class="tag">#SocialMedia</span></summary>
+          <div class="acc-content" role="region">
+            <p>Serviço de Social Media, filmmaker, MetaADS e Google ADS, com grande foco na área médica.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary role="tab"><span>Solomon</span> <span class="tag">#IA</span></summary>
+          <div class="acc-content" role="region">
+            <p>Agente de Investimentos integrado ao WhatsApp, apresentando notícias, trazendo informações em tempo real da bolsa, tirando dúvidas e comparando ativos.</p>
+          </div>
+        </details>
+
+        <!-- NOVOS -->
+        <details>
+          <summary role="tab"><span>Consultoria Financeira Pessoal</span> <span class="tag">#Planejamento</span></summary>
+          <div class="acc-content" role="region">
+            <p>Plano tático para metas, alocação, aposentadoria e proteção com acompanhamento mensal.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary role="tab"><span>Automação & Dados</span> <span class="tag">#APIs #NoCode</span></summary>
+          <div class="acc-content" role="region">
+            <p>Dashboards e integrações (WhatsApp, planilhas, CRMs) para ganhar eficiência e decisões em tempo real.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="solomon" aria-labelledby="solomon-heading">
+    <div class="solomon-bg" aria-hidden="true"></div>
+    <h2 id="solomon-heading">Conheça o Solomon</h2>
+    <div class="solomon-flex">
+      <div class="solomon-card galeria">
+        <img src="images/solomon-2.webp" alt="Interface do Solomon em uso" width="240" height="160" loading="lazy">
+      </div>
+      <div class="solomon-texto">
+        <p>O Solomon é um assistente de investimentos com inteligência artificial, projetado para ajudar investidores a tomarem decisões mais rápidas e fundamentadas.</p>
+        <p>A plataforma entrega notícias filtradas, acompanha sua carteira, analisa dividendos, e envia atualizações diretamente pelo WhatsApp. Tudo de forma automatizada e prática.</p>
+        <p>Foi desenvolvido para investidores iniciantes e experientes que desejam ter mais controle e eficiência no acompanhamento dos seus ativos.</p>
+        <a href="https://www.solomonchat.com" target="_blank" rel="noopener noreferrer" class="btn" role="link">
+          <i class="fas fa-rocket" aria-hidden="true"></i> Acesse o Solomon
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -> vira CARROSSEL (arraste + botões) -->
+  <section id="portfolio" aria-labelledby="portfolio-heading">
+    <h2 id="portfolio-heading">Portfólio Frontend</h2>
+
+    <div class="portfolio-carousel" aria-roledescription="carrossel">
+      <div class="carousel-viewport" id="carouselViewport">
+        <article class="portfolio-item carousel-item">
+          <img src="images/site1.webp" alt="Print do site Dr. Felipe" width="320" height="180" loading="lazy">
+          <a href="https://dr-felipe-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver Projeto</a>
+        </article>
+
+        <article class="portfolio-item carousel-item">
+          <img src="images/site2.webp" alt="Print do site Dr. Pedro Pajolli" width="320" height="180" loading="lazy">
+          <a href="https://dr-pedro-pajolli.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver Projeto</a>
+        </article>
+
+        <article class="portfolio-item carousel-item">
+          <img src="images/site3.webp" alt="Print do site Solomon" width="320" height="180" loading="lazy">
+          <a href="https://www.solomonchat.com/" target="_blank" rel="noopener noreferrer" class="btn">Ver Projeto</a>
+        </article>
+      </div>
+
+      <div class="carousel-controls" aria-hidden="false">
+        <button class="carousel-btn" id="btnPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn" id="btnNext" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" aria-labelledby="contato-heading">
+    <div class="contato-bg" aria-hidden="true"></div>
+    <h2 id="contato-heading">Contato</h2>
+    <div class="contato-container">
+      <div class="contato-texto">
+        <p>Quer conversar comigo sobre investimentos, tecnologia, marketing ou parcerias?</p>
+        <p>Estou disponível nas redes abaixo. Será um prazer trocar ideias com você!</p>
+        <div class="social-links" role="navigation" aria-label="Links de redes sociais">
+          <a href="https://www.instagram.com/paulobstg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Paulo">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:paulocbsantangelo@gmail.com" aria-label="Enviar email para Paulo">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a href="https://br.linkedin.com/in/paulo-santangelo-82762a150" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Paulo">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/5514997922434" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" aria-label="Conversar com Paulo no WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Fale comigo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Paulo | Projeto acadêmico Unintese</p>
+  </footer>
+
+  <script>
+    // menu mobile abre/fecha
+    try {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("nav-links");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+      });
+    } catch (e) { console.error("Erro no menu mobile:", e); }
+
+    // carrossel: botões e arraste
+    (function(){
+      const viewport = document.getElementById('carouselViewport');
+      const prev = document.getElementById('btnPrev');
+      const next = document.getElementById('btnNext');
+      if(!viewport) return;
+
+      const step = () => Math.round(viewport.clientWidth * 0.9);
+      prev.addEventListener('click', () => viewport.scrollBy({ left: -step(), behavior: 'smooth' }));
+      next.addEventListener('click', () => viewport.scrollBy({ left:  step(), behavior: 'smooth' }));
+
+      // arrastar com mouse/toque
+      let isDown=false,startX=0,scrollLeft=0;
+      const down = (e)=>{ isDown=true; startX=(e.pageX||e.touches?.[0]?.pageX)-viewport.offsetLeft; scrollLeft=viewport.scrollLeft; };
+      const up=()=>{ isDown=false; };
+      const move=(e)=>{ if(!isDown) return; e.preventDefault(); const x=(e.pageX||e.touches?.[0]?.pageX)-viewport.offsetLeft; viewport.scrollLeft = scrollLeft - (x-startX)*1.2; };
+      viewport.addEventListener('mousedown',down);
+      viewport.addEventListener('touchstart',down,{passive:true});
+      viewport.addEventListener('mouseup',up);
+      viewport.addEventListener('mouseleave',up);
+      viewport.addEventListener('touchend',up);
+      viewport.addEventListener('mousemove',move);
+      viewport.addEventListener('touchmove',move,{passive:false});
+    })();
+
+    // acordeon: fecha os outros quando um abre (fica mais limpo)
+    (function(){
+      const items = document.querySelectorAll('#solucoes .accordion details');
+      items.forEach(d=>{
+        d.addEventListener('toggle',()=>{
+          if(d.open){ items.forEach(o=>{ if(o!==d) o.open=false; }); }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
